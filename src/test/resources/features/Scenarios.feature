@@ -1,4 +1,6 @@
-Feature: Lamdatest website scenarios
+
+@Regression
+Feature: Demo playwright website scenarios
   Background:
     Given user opens page "https://www.google.com/"
 

@@ -1,16 +1,13 @@
 package Pages;
 
-import com.google.gson.JsonObject;
 import com.microsoft.playwright.*;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.HashMap;
 
 
 public class Scenarios {
 
-    public Browser browser;
+    public static Browser browser;
     public static BrowserContext context;
     public static Page page;
 
@@ -18,7 +15,7 @@ public class Scenarios {
     public static ThreadLocal<BrowserContext> threadLocalContext = new ThreadLocal<>();
 
     //Launches Browser as set by user in config file
-    public Page initDriver(String browserName) throws UnsupportedEncodingException {
+    public static Page initDriver(String browserName) throws UnsupportedEncodingException {
         BrowserType browserType = null;
 
         switch (browserName) {
