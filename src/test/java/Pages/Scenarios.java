@@ -38,13 +38,11 @@ public class Scenarios {
         if (browserType == null) throw new IllegalArgumentException("Could not Launch Browser for type" + browserType);
         context = browser.newContext();
         //Below line is used to start the trace file
-        context.tracing().start(new Tracing.StartOptions().setScreenshots(true).setSnapshots(true).setSources(false));
+       // context.tracing().start(new Tracing.StartOptions().setScreenshots(true).setSnapshots(true).setSources(false));
         page = context.newPage();
-        threadLocalDriver.set(page);
-        threadLocalContext.set(context);
+       // threadLocalDriver.set(page);
+        //threadLocalContext.set(context);
         return page;
     }
 
-    public static synchronized Page getPage() {
-        return threadLocalDriver.get(); // Will return Initialized Thread Local Driver
-    }}
+    }

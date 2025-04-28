@@ -28,6 +28,8 @@ public  class ScenariosStepDefinations {
     @When("^user searches with \"([^\"]*)\"$")
     public void userSearchesWith(String arg0) {
         page.fill("//textarea[@title='Search']",arg0);
+        //or
+        //page.locator("//textarea[@title='Search']").type(arg0);
 
     }
 }
