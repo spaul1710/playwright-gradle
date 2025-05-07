@@ -24,7 +24,7 @@ public class Scenarios {
 
                 browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(false));
                 break;
-            case "chrome":
+            case "edge","chrome":
                 browserType = Playwright.create().chromium();
 
                 browser = browserType.launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));

@@ -3,6 +3,7 @@ package Pages;
 import java.io.IOException;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
         CalculationPolymorphism calc = new CalculationPolymorphism();
         // Compile-time polymorphism: selecting the appropriate add method based on parameter types
@@ -16,7 +17,7 @@ public class Main {
 //setting value in the name member
         s.setName("vijay");
 //getting value of the name member
-        System.out.println(s.getName());
+        System.out.println(s.getName());//vijay
         Bike obj = new Honda();
         obj.run();
         Drawable d=new Circle();//In real scenario, object is provided by method e.g. getDrawable()
